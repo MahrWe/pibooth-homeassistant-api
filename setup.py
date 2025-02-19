@@ -9,7 +9,7 @@ from setuptools import setup
 
 HERE = osp.abspath(osp.dirname(__file__))
 sys.path.insert(0, HERE)
-import pibooth_telegram_upload as plugin  # nopep8 : import shall be done after adding setup to paths
+import pibooth_homeassistant_api as plugin  # nopep8 : import shall be done after adding setup to paths
 
 
 def main():
@@ -33,20 +33,20 @@ def main():
             "Natural Language :: English",
             "Topic :: Multimedia :: Graphics :: Capture :: Digital Camera",
         ],
-        author="Dídac Sabatés",
-        author_email="sabatesduran@gmail.com",
-        url="https://github.com/sabatesduran/pibooth-telegram-upload",
-        download_url="https://github.com/sabatesduran/pibooth-telegram-upload/archive/{}.tar.gz".format(
+        author="Matthias",
+        author_email="28512631+MahrWe@users.noreply.github.com",
+        url="https://github.com/MahrWe/pibooth-homeassistant-api",
+        download_url="https://github.com/MahrWe/pibooth-homeassistant-api".format(
             plugin.__version__
         ),
         license="GPLv3",
         platforms=["unix", "linux"],
-        keywords=["Raspberry Pi", "camera", "photobooth", "telegram", "chat", "bot", "channel"],
-        py_modules=["pibooth_telegram_upload"],
+        keywords=["Raspberry Pi", "camera", "photobooth", "homeassistant", "api", "smarthome"],
+        py_modules=["pibooth_homeassistant_api"],
         python_requires=">=3.6",
-        install_requires=["pibooth>=2.0.0", "python-telegram-bot==13.12"],
+        install_requires=["pibooth>=2.0.0", "hassapi==0.2.1"],
         zip_safe=False,  # Don't install the lib as an .egg zipfile
-        entry_points={"pibooth": ["pibooth_telegram_upload = pibooth_telegram_upload"]},
+        entry_points={"pibooth": ["pibooth_homeassistant_api = pibooth_homeassistant_api"]},
     )
 
 
